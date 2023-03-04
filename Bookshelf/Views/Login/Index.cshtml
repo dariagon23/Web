@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = "~/Views/Login/_LoginLayout.cshtml";
+    }
+
+<body class="text-center">
+    
+<main class="form-signin w-100 m-auto">
+  <form>
+    <img class="mb-4" src="/Images/bookshelf.jpg" alt="" width="150" height="150">
+    <h4 class="h4 mb-3 fw-normal">Welcome to My Bookshelf</h4>
+    <h5 class="h5 mb-3 fw-normal">Please, sign in</h5>
+
+    <div class="form-floating">
+      <input type="text" name="UserLogin" class="form-control-sm" id="floatingInput" placeholder="Login">
+    </div>
+    <div class="form-floating">
+      <input type="password" name="UserPassword" class="form-control-sm" id="floatingPassword" placeholder="Password">
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    @*<button class="btn btn-primary" type="submit">Sign in</button>*@
+    <p>
+        <input type="submit" value="Sign in" />
+    </p>
+  </form>
+</main>
+</body>

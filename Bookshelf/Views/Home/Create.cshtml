@@ -1,0 +1,24 @@
+﻿@model Bookshelf.Models.Book
+ 
+<h2>Add a new book</h2>
+<form asp-action="create" asp-controller="home">
+    <p>
+        <label asp-for="BookName">Title</label><br />
+        <input type="text" asp-for="BookName" />
+    </p>
+     <p>
+        <label asp-for="BookAuthor">Author</label><br />
+        <input type="text" asp-for="BookAuthor" />
+    </p>
+     <p>
+        <label asp-for="BookDescription">Description</label><br />
+        <input type="text" asp-for="BookDescription" />
+    </p>
+    <p>
+        <label asp-for="PagesNum">Pages</label><br />
+        <input type="number" asp-for="PagesNum" />
+    </p>
+    <p>
+        <input type="submit" value="Add" />
+    </p>
+</form>

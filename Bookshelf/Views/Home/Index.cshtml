@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<Bookshelf.Models.Book>
+ 
+<h2>The list of books</h2>
+<p><a asp-action="Create">Add a new book</a></p>
+<table class="table">
+     <tr><th>Title</th><th>Author</th><th>Description</th><th>Pages</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BookName</td>
+            <td>@item.BookAuthor</td>
+            <td>@item.BookDescription</td>
+            <td>@item.PagesNum</td>
+            <td>
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.BookId">Edit</a>
+            </td>
+            <td>
+                <form asp-controller="Home" asp-action="Delete" method="post"  asp-route-id="@item.BookId">
+                    <input type="submit" value="Delete" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>
